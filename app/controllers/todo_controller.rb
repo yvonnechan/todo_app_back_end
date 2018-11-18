@@ -1,8 +1,11 @@
 class TodoController < ApplicationController
     def index
+        #This puts all of the todo objects in our database in an array and stores it in the @todos variable.
+        @todos = Todo.all
     end
     def show
         @todo = Todo.find_by_id(params[:id])
+
     end
     def new
     end
